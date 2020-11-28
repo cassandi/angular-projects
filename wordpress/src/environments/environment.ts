@@ -3,9 +3,12 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
-};
+  production: false,
+  // WORDPRESS_REST_URL: 'http://localhost:8888/staging'
+  // WORDPRESS_REST_URL: 'http://demo5683935.mockable.io/'
+  WORDPRESS_REST_URL: 'https://104efa24-1ca3-429e-b02a-879d2e09dabe.mock.pstmn.io/'
 
+};
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.

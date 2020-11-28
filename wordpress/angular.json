@@ -33,6 +33,34 @@
             "scripts": []
           },
           "configurations": {
+            "qa": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.qa.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            },
             "production": {
               "fileReplacements": [
                 {
@@ -69,6 +97,9 @@
             "browserTarget": "wordpress:build"
           },
           "configurations": {
+            "qa": {
+              "browserTarget": "wordpress:build:qa"
+            },
             "production": {
               "browserTarget": "wordpress:build:production"
             }
@@ -117,6 +148,9 @@
             "devServerTarget": "wordpress:serve"
           },
           "configurations": {
+            "qa": {
+              "devServerTarget": "wordpress:serve:qa"
+            },
             "production": {
               "devServerTarget": "wordpress:serve:production"
             }
